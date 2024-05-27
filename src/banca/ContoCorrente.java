@@ -27,6 +27,7 @@ public class ContoCorrente {
 
 
         if (saldo < 0) {
+            System.out.println("Saldo conto: " + saldo);
             throw new BancaException("Il tuo conto è in rosso!");
         }
 

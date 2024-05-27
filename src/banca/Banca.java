@@ -14,9 +14,6 @@ public class Banca {
 
         try {
             conto1.preleva(21000);
-
-            System.out.println("Saldo conto: " + conto1.restituisciSaldo());
-
         } catch (BancaException e) {
             logger.error(e.getMessage());
         }
@@ -32,5 +29,14 @@ public class Banca {
         } catch (BancaException e) {
             logger.error(e.getMessage());
         }
+
+
+        try {
+            conto2.preleva(500);
+            conto2.stampaSaldo();
+        } catch (BancaException e) {
+            logger.error(e.getMessage());
+        }
+
     }
 }
