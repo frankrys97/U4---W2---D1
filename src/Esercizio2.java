@@ -17,17 +17,17 @@ public class Esercizio2 {
 
             logger.info("Inserisci i km percorsi:");
 
-            int kmPercorsi = Integer.parseInt(scanner.nextLine());
+            double kmPercorsi = Integer.parseInt(scanner.nextLine());
 
             logger.info("Inserisci i litri consumati:");
 
-            int litriConsumati = Integer.parseInt(scanner.nextLine());
+            double litriConsumati = Integer.parseInt(scanner.nextLine());
 
             if (litriConsumati <= 0) {
                 throw new NumberDivZeroException();
             }
 
-            double consumoMedio = (double) kmPercorsi / litriConsumati;
+            double consumoMedio = kmPercorsi / litriConsumati;
             logger.info("Consumo medio: {}", consumoMedio);
 
             scanner.close();
